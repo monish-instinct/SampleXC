@@ -2,26 +2,26 @@
 import PackageDescription
 
 let package = Package(
-    name: "YourFramework",
+    name: "MyNeuralFramework",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_15),
     ],
     products: [
         .library(
-            name: "YourFramework",
-            targets: ["YourFramework"]
+            name: "MyNeuralFramework",
+            targets: ["MyNeuralFramework"]
         ),
     ],
     dependencies: [
-        // SQLCipher (if used via SPM)
-        .package(url: "https://github.com/stephencelis/SQLCipher.git", from: "4.4.2")
+        .package(url: "https://github.com/stoneburner/sqlcipher.git", from: "4.5.0"),
+        .package(url: "https://github.com/razorpay/razorpay-pod.git", from: "1.0.0")
     ],
     targets: [
         .binaryTarget(
-            name: "YourFramework",
-            url: "https://github.com/your-user/your-repo/releases/download/v1.0.0/YourFramework.xcframework.zip",
-            checksum: "REPLACE_WITH_GENERATED_CHECKSUM"
+            name: "MyNeuralFramework",
+            url: "https://github.com/monish-instinct/SampleXC/releases/download/samplexc/MyNeuralFramework.xcframework.zip",
+            checksum: "6f8cd67c40b919984ca9bf648f4432a28d2e4f9296e8145ea4c2b5042aa80e71"
         )
     ]
 )
