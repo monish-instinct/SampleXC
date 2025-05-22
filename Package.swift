@@ -13,10 +13,6 @@ let package = Package(
             targets: ["MyNeuralFramework"]
         ),
     ],
-    dependencies: [
-        .package(url: "https://github.com/stoneburner/sqlcipher.git", from: "4.5.0"),
-        .package(url: "https://github.com/razorpay/razorpay-pod.git", from: "1.0.0")
-    ],
     targets: [
         .binaryTarget(
             name: "MyNeuralFramework",
